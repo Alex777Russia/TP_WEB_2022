@@ -3,9 +3,9 @@
 }
 
 .avatar {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    border-radius: 15%;
     overflow: hidden;
 }
 
@@ -20,4 +20,36 @@
     border: 2px solid gray;
     border-radius: 6px;
     padding: 20px;
+}
+
+.w3-sidebar  {
+    padding-left: 50px;
+}
+
+.w3-sidebar-item {
+    font-size: 250%;
+}
+
+.w3-button {
+    font-size: 150%;
+    color: #1a1e21;
+    margin: 0 auto;
+    display: block;
+}
+
+.w3-black {
+    color: #1a1e21;
+}
+
+.w3-button-like {
+    margin-left: 150px;
+    border-radius: 30%;
+}
+
+.w3-comments {
+    margin-left: 250px;
+}
+
+.answer {
+    margin-left: 400px;
 }

@@ -1,8 +1,8 @@
-
 <!doctype html>
 <html lang="en" class="h-100">
 <head>
     <meta charset="utf-8">
+    <title>AskFuture</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sticky Footer Navbar Template · Bootstrap v5.2</title>
 
@@ -15,10 +15,18 @@
 
 <header>
     <!-- Fixed navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <nav class="navbar navbar-dark bg-dark">
+        <a id="main_label" class="navbar-brand" href="#">
+            <div>
+                <!--<h1 id="site-title">AskTheatre</h1>-->
+                <img id="user-pic" src="../static/img/logotype.jpg" alt="Logotype" class="rounded"/>
+            </div>
+        </a>
+
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Fixed navbar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
@@ -50,32 +58,69 @@
         <div class="row">
             <div class="col-8">
                 <div class="question">
-                    <div class="row">
+                    <div class="row-7">
                         <div class="col-2">
                             <div class="avatar">
-                                <img src="../static/img/steve_jobs.jpg" alt="" />
+                                <img src="../static/img/steve_jobs.jpg" alt=""/>
                             </div>
                         </div>
-                        <div class="col-10">
+                        <div class="col-12">
                             <h2 class="question-title">Question 1</h2>
                             <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam officia qui quod sed soluta suscipit vitae.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam
+                                officia qui quod sed soluta suscipit vitae.
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row-12">
+                        <div class="col-6">
+                            <div class="like">
+                                <button class="w3-button-like w3-black">Like</button>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="comments">
+                                <p><span class="w3-comments"> <a href="#" class="w3-black">Comments(128)</a> </span></p>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="answer">
+                                <p>Tags: <span class="w3-tag"> <a href="#" class="w3-black">SpaceTechnology</a> </span></p>
                             </div>
                         </div>
                     </div>
+
                 </div>
 
                 <div class="question">
                     <div class="row">
                         <div class="col-2">
                             <div class="avatar">
-                                <img src="../static/img/tim_cook.jpg" alt="" />
+                                <img src="../static/img/tim_cook.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="col-10">
                             <h2 class="question-title">Question 2</h2>
                             <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam officia qui quod sed soluta suscipit vitae.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam
+                                officia qui quod sed soluta suscipit vitae.
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="like">
+                                <button class="w3-button-like w3-black">Like</button>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="comments">
+                                <p><span class="w3-comments"> <a href="#" class="w3-black">Comments(71)</a> </span></p>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="answer">
+                                <p>Tags: <span class="w3-tag"> <a href="#" class="w3-black">SpaceTechnology</a> </span></p>
                             </div>
                         </div>
                     </div>
@@ -85,13 +130,29 @@
                     <div class="row">
                         <div class="col-2">
                             <div class="avatar">
-                                <img src="../static/img/mark_zuckerberg.jpg" alt="" />
+                                <img src="../static/img/mark_zuckerberg.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="col-10">
                             <h2 class="question-title">Question 3</h2>
                             <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam officia qui quod sed soluta suscipit vitae.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam
+                                officia qui quod sed soluta suscipit vitae.
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="like">
+                                <button class="w3-button-like w3-black">Like</button>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="comments">
+                                <p><span class="w3-comments"> <a href="#" class="w3-black">Comments(54)</a> </span></p>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="answer">
+                                <p>Tags: <span class="w3-tag"> <a href="#" class="w3-black">SpaceTechnology</a> </span></p>
                             </div>
                         </div>
                     </div>
@@ -101,13 +162,29 @@
                     <div class="row">
                         <div class="col-2">
                             <div class="avatar">
-                                <img src="../static/img/bill_gates.jpg" alt="" />
+                                <img src="../static/img/bill_gates.jpg" alt=""/>
                             </div>
                         </div>
                         <div class="col-10">
                             <h2 class="question-title">Question 4</h2>
                             <div class="question-text">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam officia qui quod sed soluta suscipit vitae.
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ea, expedita hic magnam
+                                officia qui quod sed soluta suscipit vitae.
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="like">
+                                <button class="w3-button-like w3-black">Like</button>
+                            </div>
+                        </div>
+                        <div class="col-7">
+                            <div class="comments">
+                                <p><span class="w3-comments"> <a href="#" class="w3-black">Comments(3)</a> </span></p>
+                            </div>
+                        </div>
+                        <div class="col-8">
+                            <div class="answer">
+                                <p>Tags: <span class="w3-tag"> <a href="#" class="w3-black">SpaceTechnology</a>, <a href="#" class="w3-black">SpaceTechnology</a> </span></p>
                             </div>
                         </div>
                     </div>
@@ -122,7 +199,33 @@
                     <li class="page-item"><a class="page-link" href="#">Next</a></li>
                 </ul>
             </div>
-            <div class="col-4">sidebar</div>
+
+            <div class="w3-sidebar w3-bar-block" style="width:25%">
+                <h3 class="w3-sidebar-item">Popular Tags</h3>
+                <div class="w3-container w3-border w3-large">
+                    <a href="#" class="w3-bar-item w3-button">SpaceTechnology</a>
+                    <a href="#" class="w3-bar-item w3-button">ComputerVision</a>
+                    <a href="#" class="w3-bar-item w3-button">ML</a>
+                    <a href="#" class="w3-bar-item w3-button">NLP</a>
+                    <a href="#" class="w3-bar-item w3-button">Swift</a>
+                    <a href="#" class="w3-bar-item w3-button">Apple</a>
+                    <a href="#" class="w3-bar-item w3-button">Microsoft</a>
+                    <a href="#" class="w3-bar-item w3-button">Google</a>
+                    <a href="#" class="w3-bar-item w3-button">Algorithms</a>
+                </div>
+
+                <h4 class="w3-sidebar-item">Best Members</h4>
+                <div class="w3-container w3-border w3-large">
+                    <a href="#" class="w3-bar-item w3-button">Tim Cook</a>
+                    <a href="#" class="w3-bar-item w3-button">Steve Jobs</a>
+                    <a href="#" class="w3-bar-item w3-button">Mark Zuckerberg</a>
+                    <a href="#" class="w3-bar-item w3-button">Pavel Durov</a>
+                    <a href="#" class="w3-bar-item w3-button">Arkadiy Volozh</a>
+                    <a href="#" class="w3-bar-item w3-button">Elon Musk</a>
+                    <a href="#" class="w3-bar-item w3-button">Larry Page</a>
+                    <a href="#" class="w3-bar-item w3-button">Sergey Brin</a>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -133,6 +236,18 @@
         <span class="text-muted">Place sticky footer content here.</span>
     </div>
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/d8773369b4.js" crossorigin="anonymous"></script>
+<script src="../static/js/index.js"></script>
 
 </body>
 </html>
