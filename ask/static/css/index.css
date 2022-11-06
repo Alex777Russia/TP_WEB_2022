@@ -1,11 +1,11 @@
 a {
     color: black;
-    text-decoration:underline;
+    text-decoration: underline;
 }
 
 a:hover {
-    color: #6c757d;
-    text-decoration: underline
+    color: gray;
+    text-decoration: underline;
 }
 
 img {
@@ -20,7 +20,7 @@ div.headings {
 
 div.headings * {
     display: inline;
-    margin-right: 80px;
+    margin-right: 40px;
 }
 
 .question-card {

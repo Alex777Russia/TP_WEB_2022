@@ -17,16 +17,7 @@ body {
     width: 100%;
     height: var(--footer-height); /* Set the fixed height of the footer here */
     line-height: var(--footer-height); /* Vertically center the text there */
-}
-
-/*#main_label  {*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*}*/
-
-/*#site-title {*/
-/*    margin-right: 10px;*/
-/*}*/
+} /* did not use */
 
 #search-box {
     max-width: 50%;
@@ -39,15 +30,16 @@ body {
 #user-pic {
     width: 100px;
     height: 100px;
-    /*margin-right: 10px;*/
+    margin-right: 10px;
 }
 
 #ask-question {
-    margin-right: 50px;
+    margin-right: 30px;
 }
 
 #user-menu {
     color: white;
+    margin-right: 20px;
 }
 
 #aside-info {

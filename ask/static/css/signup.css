@@ -3,5 +3,5 @@
 }
 
 .custom-file-label::after {
-  content: "Загрузить";
+  content: "Download";
 }
