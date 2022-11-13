@@ -6,16 +6,16 @@
 <head>
     <meta charset="UTF-8">
     <title>AskFuture</title>
-    <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
-    <link rel="stylesheet" href="{% static "css/base.css" %}">
-    <link rel="stylesheet" href="{% static "css/index.css" %}">
+    <link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+    <link rel="stylesheet" href={% static "css/base.css" %}>
+    <link rel="stylesheet" href={% static "css/index.css" %}>
 </head>
 <body>
 <header>
     <nav class="navbar navbar-dark bg-dark">
-        <a id="main_label" class="navbar-brand" href="{% url 'index' %}">
+        <a id="main_label" class="navbar-brand" href="#">
             <div>
-<!--                <h1 id="site-title">AskTheatre</h1>-->
+                <!--                <h1 id="site-title">AskTheatre</h1>-->
                 <img id="user-pic" src="{% static "img/logotype.jpg" %}" alt="Logotype" class="rounded"/>
             </div>
         </a>
@@ -31,7 +31,7 @@
         </div>
 
         <div id="user-tools">
-            <a href="../new_question.html" id="ask-question" class="btn btn-secondary">Ask Future</a>
+            <a href="{% url 'new_question' %}" id="ask-question" class="btn btn-secondary">Ask Future</a>
 
             <div id="user-dropdown" class="dropdown">
                 <a class="dropdown-toggle" href="#" id="user-menu" role="button"
@@ -39,9 +39,9 @@
                     Jacque Fresco
                 </a>
                 <div class="dropdown-menu" aria-labelledby="user-menu">
-                    <a class="dropdown-item" href="../index.html">Profile</a>
-                    <a class="dropdown-item" href="../settings.html">Settings</a>
-                    <a class="dropdown-item" href="../login.html">Exit</a>
+                    <a class="dropdown-item" href="{% url 'index' %}">Profile</a>
+                    <a class="dropdown-item" href="{% url 'settings' %}">Settings</a>
+                    <a class="dropdown-item" href="{% url 'login' %}">Exit</a>
                 </div>
             </div>
 
@@ -53,35 +53,37 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-9 pr-5 mt-2"> </div>
+            <div class="col-9 pr-5 mt-2">
+                {% block content %}
+                {% endblock %}
 
+                <aside id="aside-info" class="col-3">
+                    <h2>Popular Tags</h2>
+                    <div class="bg-light shadow-sm" id="tags-container">
+                        <ul class="tags-list">
+                            <li><a href="{% url 'tag_question' %}">SpaceTechnology</a></li>
+                            <li><a href="{% url 'tag_question' %}">ComputerVision</a></li>
+                            <li><a href="{% url 'tag_question' %}">ML</a></li>
+                            <li><a href="{% url 'tag_question' %}">NLP</a></li>
+                            <li><a href="{% url 'tag_question' %}">Swift</a></li>
+                            <li><a href="{% url 'tag_question' %}">Apple</a></li>
+                            <li><a href="{% url 'tag_question' %}">Microsoft</a></li>
+                            <li><a href="{% url 'tag_question' %}">Google</a></li>
+                            <li><a href="{% url 'tag_question' %}">Algorithms</a></li>
+                        </ul>
+                    </div>
 
-            <aside id="aside-info" class="col-3">
-                <h2>Popular Tags</h2>
-                <div class="bg-light shadow-sm" id="tags-container">
-                    <ul class="tags-list">
-                        <li><a href="../tag_question.html">SpaceTechnology</a></li>
-                        <li><a href="../tag_question.html">ComputerVision</a></li>
-                        <li><a href="../tag_question.html">ML</a></li>
-                        <li><a href="../tag_question.html">NLP</a></li>
-                        <li><a href="../tag_question.html">Swift</a></li>
-                        <li><a href="../tag_question.html">Apple</a></li>
-                        <li><a href="../tag_question.html">Microsoft</a></li>
-                        <li><a href="../tag_question.html">Google</a></li>
-                        <li><a href="../tag_question.html">Algorithms</a></li>
-                    </ul>
-                </div>
-
-                <h2>Best Members</h2>
-                <div class="bg-light shadow-sm" id="best-users-container">
-                    <ul>
-                        <li><a href="#">Mark Zuckerberg</a></li>
-                        <li><a href="#">Ilon Musk</a></li>
-                        <li><a href="#">Alexey Shevchenko</a></li>
-                    </ul>
-                </div>
-            </aside>
-
+                    <h2>Best Members</h2>
+                    <div class="bg-light shadow-sm" id="best-users-container">
+                        <ul>
+                            <li><a href="#">Mark Zuckerberg</a></li>
+                            <li><a href="#">Ilon Musk</a></li>
+                            <li><a href="#">Alexey Shevchenko</a></li>
+                        </ul>
+                    </div>
+                </aside>
+                {% include 'inc/paginator.html' %}
+            </div>
         </div>
     </div>
 </main>
