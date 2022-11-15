@@ -17,14 +17,8 @@
 <main>
     <div class="container">
         <div class="row">
-            <div class="col-9 pr-5 mt-2">
-                {% block content %}
-                {% endblock %}
-                <aside id="aside-info" class="col-3">
-                    {% include 'inc/right_menu.html' %}
-                </aside>
-                {% include 'inc/paginator.html' %}
-            </div>
+            {% block content %}
+            {% endblock %}
         </div>
     </div>
 </main>

@@ -1,79 +1,85 @@
 {% extends "inc/base.html" %}
-
 {% load static %}
-
 {% block content %}
-    <div class="headings">
-        <h2>Questions for tag:</h2>
-        <h4><a href="#">Future</a></h4>
-    </div>
-    <div class="question-card container bg-light shadow-sm">
-        <div class="row">
-            <div class="col-2 left-side">
-                <img src="../static/img/bill_gates.jpg" alt="Avatar" class="rounded">
-                <button class="like__btn">
-                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                    <span id="count">163,238</span> Like
-                </button>
-            </div>
-            <div class="col-10 right-side">
-                <h3 class="question-title"><a href="question.html">When?</a></h3>
-                <p class="question-description">Do robots and machines captured the World?</p>
-                <div class="answers-and-tags">
-                    <a href="question.html" class="link-to-answers">Comments(350)</a>
-                    <p class="question-tags">Tags:
-                        <a href="tag_question.html">ML</a>
-                        <a href="tag_question.html">AI</a>
-                        <a href="tag_question.html">Future</a></p>
-                </div>
 
+    <div class="col-9 pr-5 mt-2">
+        <div class="headings">
+            <h2>Questions for tag:</h2>
+            <h4><a href="#">Future</a></h4>
+        </div>
+        <div class="question-card container bg-light shadow-sm">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <img src="../static/img/bill_gates.jpg" alt="Avatar" class="rounded">
+                    <button class="like__btn">
+                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                        <span id="count">163,238</span> Like
+                    </button>
+                </div>
+                <div class="col-10 right-side">
+                    <h3 class="question-title"><a href="question.html">When?</a></h3>
+                    <p class="question-description">Do robots and machines captured the World?</p>
+                    <div class="answers-and-tags">
+                        <a href="question.html" class="link-to-answers">Comments(350)</a>
+                        <p class="question-tags">Tags:
+                            <a href="tag_question.html">ML</a>
+                            <a href="tag_question.html">AI</a>
+                            <a href="tag_question.html">Future</a></p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="question-card container bg-light shadow-sm">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <img src="../static/img/ilon_musk.jpg" alt="Аватар" class="rounded">
+                    <button class="like__btn">
+                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                        <span id="count">77,759</span> Like
+                    </button>
+                </div>
+                <div class="col-10 right-side">
+                    <h3 class="question-title"><a href="question.html">Who can save our planet?</a></h3>
+                    <p class="question-description">On my opinion, out planet needs help</p>
+                    <div class="answers-and-tags">
+                        <a href="question.html" class="link-to-answers">Comments(997)</a>
+                        <p class="question-tags">Tags:
+                            <a href="tag_question.html">Space Technologies</a>
+                            <a href="tag_question.html">Earth</a>
+                            <a href="tag_question.html">Future</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="question-card container bg-light shadow-sm">
+            <div class="row">
+                <div class="col-2 left-side">
+                    <img src="../static/img/tim_cook.jpg" alt="Аватар" class="rounded">
+                    <button class="like__btn">
+                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                        <span id="count">777,882</span> Like
+                    </button>
+                </div>
+                <div class="col-10 right-side">
+                    <h3 class="question-title"><a href="question.html">Where is Steve?</a></h3>
+                    <p class="question-description">Where is Steve?</p>
+                    <div class="answers-and-tags">
+                        <a href="question.html" class="link-to-answers">Comments(379)</a>
+                        <p class="question-tags">Tags:
+                            <a href="tag_question.html">Future</a>
+                            <a href="tag_question.html">Apple</a></p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <div class="question-card container bg-light shadow-sm">
-        <div class="row">
-            <div class="col-2 left-side">
-                <img src="../static/img/ilon_musk.jpg" alt="Аватар" class="rounded">
-                <button class="like__btn">
-                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                    <span id="count">77,759</span> Like
-                </button>
-            </div>
-            <div class="col-10 right-side">
-                <h3 class="question-title"><a href="question.html">Who can save our planet?</a></h3>
-                <p class="question-description">On my opinion, out planet needs help</p>
-                <div class="answers-and-tags">
-                    <a href="question.html" class="link-to-answers">Comments(997)</a>
-                    <p class="question-tags">Tags:
-                        <a href="tag_question.html">Space Technologies</a>
-                        <a href="tag_question.html">Earth</a>
-                        <a href="tag_question.html">Future</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+    {% include 'inc/paginator.html' %}
 
-    <div class="question-card container bg-light shadow-sm">
-        <div class="row">
-            <div class="col-2 left-side">
-                <img src="../static/img/tim_cook.jpg" alt="Аватар" class="rounded">
-                <button class="like__btn">
-                    <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                    <span id="count">777,882</span> Like
-                </button>
-            </div>
-            <div class="col-10 right-side">
-                <h3 class="question-title"><a href="question.html">Where is Steve?</a></h3>
-                <p class="question-description">Where is Steve?</p>
-                <div class="answers-and-tags">
-                    <a href="question.html" class="link-to-answers">Comments(379)</a>
-                    <p class="question-tags">Tags:
-                        <a href="tag_question.html">Future</a>
-                        <a href="tag_question.html">Apple</a></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </div>
 {% endblock %}
