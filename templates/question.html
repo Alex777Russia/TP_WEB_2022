@@ -3,72 +3,11 @@
 {% block content %}
 
     <div class="col-9 pr-5 mt-2">
-        <div class="question-card container">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="../static/img/ilon_musk.jpg" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">839,358</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <h3 class="question-title"><a href="question.html">Who can save our planet?</a></h3>
-                    <p class="question-description">On my opinion, out planet needs help</p>
-                    <div class="answers-and-tags">
-                        <p class="question-tags">Tags: <a href="tag_question.html">Future</a> <a
-                                href="tag_question.html">Space
-                            Technologies</a></p>
-                    </div>
+        {% include "inc/question_item.html" %}
 
-                </div>
-            </div>
-        </div>
+        {% include "inc/answer_item.html" %}
 
-
-        <div class="answer-card container bg-light shadow-sm">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="../static/img/mark_zuckerberg.jpg" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">5,994</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <p class="question-description">We need more public and less personal transport</p>
-                    <div class="form-check mark-correct">
-                        <input class="form-check-input" type="checkbox" id="correct-checkbox-2">
-                        <label class="form-check-label" for="correct-checkbox-2">
-                            mark as solution
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="answer-card container bg-light shadow-sm">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="../static/img/steve_jobs.jpg" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">75,438</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <p class="question-description">I think, we need more rational to use the resources of our planet in
-                        all
-                        spheres, and not only to save on transport and movement</p>
-                    <div class="form-check mark-correct">
-                        <input class="form-check-input" type="checkbox" id="correct-checkbox-3">
-                        <label class="form-check-label" for="correct-checkbox-3">
-                            mark as solution
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {% include "inc/answer_item.html" %}
         <form>
             <div class="enter-answer form-group">
                 <textarea class="form-control" id="answer" placeholder="Text your answer" required></textarea>

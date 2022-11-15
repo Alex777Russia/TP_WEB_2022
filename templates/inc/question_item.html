@@ -1,0 +1,24 @@
+{% load static %}
+<div class="question-card container bg-light shadow-sm">
+    <div class="row">
+        <div class="col-2 left-side">
+            <img src="{% static "img/bill_gates.jpg" %}" alt="Avatar" class="rounded">
+            <button class="like__btn">
+                <span id="icon"><i class="far fa-thumbs-up"></i></span>
+                <span id="count">198,498</span> Like
+            </button>
+        </div>
+        <div class="col-10 right-side">
+            <h3 class="question-title"><a href="{% url 'question' question_id=question.id %}">{{ question.title }}</a></h3>
+            <p class="question-description">{{ question.text }}</p>
+            <div class="answers-and-tags">
+                <a href="{% url 'question' question_id=question.id %}" class="link-to-answers">Comments({{ question.answers_number }})</a>
+                <p class="question-tags">Tags: {%  for tag in question.tags  %} <a href="{% url 'tag_question' %}">{{ tag }}</a> {% endfor %}
+                    <a href="{% url 'tag_question' %}">Future</a> <a
+                        href="{% url 'tag_question' %}">ML</a> <a href="{% url 'tag_question' %}">AI</a></p>
+
+            </div>
+
+        </div>
+    </div>
+</div>

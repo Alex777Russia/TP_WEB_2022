@@ -7,71 +7,11 @@
             <h2>NEW questions</h2>
             <a href="#" style="accent-color: #adb5bd">Rating issues</a>
         </div>
-        <div class="question-card container bg-light shadow-sm">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="{% static  "img/bill_gates.jpg" %}" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">198,498</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <h3 class="question-title"><a href="{% url 'question' %}">When?</a></h3>
-                    <p class="question-description">Do robots and machines captured the World?</p>
-                    <div class="answers-and-tags">
-                        <a href="{% url 'question' %}" class="link-to-answers">Comments(74,812)</a>
-                        <p class="question-tags">Tags: <a href="{% url 'tag_question' %}">Future</a> <a
-                                href="{% url 'tag_question' %}">ML</a> <a href="{% url 'tag_question' %}">AI</a></p>
 
-                    </div>
+        {% for question in questions %}
+            {% include "inc/question_item.html" %}
+        {% endfor %}
 
-                </div>
-            </div>
-        </div>
-
-        <div class="question-card container bg-light shadow-sm">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="{% static  "img/steve_jobs.jpg" %}" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">1,879,236</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <h3 class="question-title"><a href="{% url 'question' %}">What is the meaning of life</a></h3>
-                    <p class="question-description">If you want to go fast - go alone, but if you want to go far - go
-                        together</p>
-                    <div class="answers-and-tags">
-                        <a href="{% url 'question' %}" class="link-to-answers">Comments(74,899)</a>
-                        <p class="question-tags">Tags: <a href="{% url 'tag_question' %}">Future</a> <a
-                                href="{% url 'tag_question' %}">Quotes</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="question-card container bg-light shadow-sm">
-            <div class="row">
-                <div class="col-2 left-side">
-                    <img src="{% static "img/ilon_musk.jpg" %}" alt="Avatar" class="rounded">
-                    <button class="like__btn">
-                        <span id="icon"><i class="far fa-thumbs-up"></i></span>
-                        <span id="count">283,889</span> Like
-                    </button>
-                </div>
-                <div class="col-10 right-side">
-                    <h3 class="question-title"><a href="{% url 'question' %}">Who can save our planet?</a></h3>
-                    <p class="question-description">On my opinion, out planet needs help</p>
-                    <div class="answers-and-tags">
-                        <a href="{% url 'question' %}" class="link-to-answers">Comments(997)</a>
-                        <p class="question-tags">Tags: <a href="{% url 'tag_question' %}">Future</a> <a
-                                href="{% url 'tag_question' %}">SpaceTechnologies</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <aside id="aside-info" class="col-3">
