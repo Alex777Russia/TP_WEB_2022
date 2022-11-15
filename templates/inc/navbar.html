@@ -1,0 +1,39 @@
+{% load static %}
+<header>
+    <nav class="navbar navbar-dark bg-dark">
+        <a id="main_label" class="navbar-brand" href="{% url 'index' %}">
+            <div>
+                <!--                <h1 id="site-title">AskTheatre</h1>-->
+                <img id="user-pic" src="{% static "img/logotype.jpg" %}" alt="Logotype" class="rounded"/>
+            </div>
+        </a>
+
+        <div class="input-group" id="search-box">
+            <input class="form-control form-control-lg" type="search" placeholder="Enter"
+                   aria-label="Enter">
+            <span class="input-group-append">
+                <button class="btn btn-lg btn-outline-secondary" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </span>
+        </div>
+
+        <div id="user-tools">
+            <a href="{% url 'new_question' %}" id="ask-question" class="btn btn-secondary">Ask Future</a>
+
+            <div id="user-dropdown" class="dropdown">
+                <a class="dropdown-toggle" href="#" id="user-menu" role="button"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Jacque Fresco
+                </a>
+                <div class="dropdown-menu" aria-labelledby="user-menu">
+                    <a class="dropdown-item" href="{% url 'index' %}">Profile</a>
+                    <a class="dropdown-item" href="{% url 'settings' %}">Settings</a>
+                    <a class="dropdown-item" href="{% url 'login' %}">Exit</a>
+                </div>
+            </div>
+
+            <img id="user-pic" src="{% static "img/profile_photo.jpg" %}" alt="Avatar" class="rounded"/>
+        </div>
+    </nav>
+</header>
