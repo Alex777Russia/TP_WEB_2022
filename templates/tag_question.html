@@ -10,7 +10,7 @@
         <div class="question-card container bg-light shadow-sm">
             <div class="row">
                 <div class="col-2 left-side">
-                    <img src="../static/img/bill_gates.jpg" alt="Avatar" class="rounded">
+                    <img src="{% static "img/bill_gates.jpg" %}" alt="Avatar" class="rounded">
                     <button class="like__btn">
                         <span id="icon"><i class="far fa-thumbs-up"></i></span>
                         <span id="count">163,238</span> Like
@@ -22,9 +22,9 @@
                     <div class="answers-and-tags">
                         <a href="question.html" class="link-to-answers">Comments(350)</a>
                         <p class="question-tags">Tags:
-                            <a href="tag_question.html">ML</a>
-                            <a href="tag_question.html">AI</a>
-                            <a href="tag_question.html">Future</a></p>
+                            <a href="{% url 'tag_question' %}">ML</a>
+                            <a href="{% url 'tag_question' %}">AI</a>
+                            <a href="{% url 'tag_question' %}">Future</a></p>
                     </div>
 
                 </div>
@@ -34,7 +34,7 @@
         <div class="question-card container bg-light shadow-sm">
             <div class="row">
                 <div class="col-2 left-side">
-                    <img src="../static/img/ilon_musk.jpg" alt="Аватар" class="rounded">
+                    <img src="{% static "img/ilon_musk.jpg" %}" alt="Аватар" class="rounded">
                     <button class="like__btn">
                         <span id="icon"><i class="far fa-thumbs-up"></i></span>
                         <span id="count">77,759</span> Like
@@ -46,18 +46,22 @@
                     <div class="answers-and-tags">
                         <a href="question.html" class="link-to-answers">Comments(997)</a>
                         <p class="question-tags">Tags:
-                            <a href="tag_question.html">Space Technologies</a>
-                            <a href="tag_question.html">Earth</a>
-                            <a href="tag_question.html">Future</a></p>
+                            <a href="{% url 'tag_question' %}">Space Technologies</a>
+                            <a href="{% url 'tag_question' %}">Earth</a>
+                            <a href="{% url 'tag_question' %}">Future</a></p>
                     </div>
                 </div>
             </div>
         </div>
 
+        {% for question in questions %}
+            {% include "inc/question_item.html" %}
+        {% endfor %}
+
         <div class="question-card container bg-light shadow-sm">
             <div class="row">
                 <div class="col-2 left-side">
-                    <img src="../static/img/tim_cook.jpg" alt="Аватар" class="rounded">
+                    <img src="{% static "img/tim_cook.jpg" %}" class="rounded">
                     <button class="like__btn">
                         <span id="icon"><i class="far fa-thumbs-up"></i></span>
                         <span id="count">777,882</span> Like
@@ -69,8 +73,8 @@
                     <div class="answers-and-tags">
                         <a href="question.html" class="link-to-answers">Comments(379)</a>
                         <p class="question-tags">Tags:
-                            <a href="tag_question.html">Future</a>
-                            <a href="tag_question.html">Apple</a></p>
+                            <a href="{% url 'tag_question' %}">Future</a>
+                            <a href="{% url 'tag_question' %}">Apple</a></p>
                     </div>
                 </div>
             </div>

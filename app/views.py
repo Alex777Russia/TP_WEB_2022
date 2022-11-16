@@ -16,6 +16,10 @@ def question(request, question_id: int):
 def new_question(request):
     return render(request, 'new_question.html')
 
+def hot_question(request):
+    context = {'questions': models.HOT_QUESTIONS}
+    return render(request, 'hot_question.html', context = context)
+
 def tag_question(request):
     return render(request, 'tag_question.html')
 
