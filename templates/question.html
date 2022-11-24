@@ -1,0 +1,24 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-9 pr-5 mt-2">
+        {% include "inc/question_item.html" %}
+
+        {% include "inc/answer_item.html" %}
+
+        {% include "inc/answer_item.html" %}
+        <form>
+            <div class="enter-answer form-group">
+                <textarea class="form-control" id="answer" placeholder="Text your answer" required></textarea>
+                <button class="btn btn-secondary mb-4" type="submit">Send a reply</button>
+            </div>
+        </form>
+    </div>
+
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+    {% include 'inc/paginator.html' %}
+
+{% endblock %}

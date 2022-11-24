@@ -1,0 +1,51 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-9 pr-5">
+        <h2>Add question</h2>
+        <div class="container bg-light shadow-sm mb-3">
+            <form action="question.html" id="create-form" class="needs-validation" novalidate>
+                <div class="form-group row p-3">
+                    <label for="input-title" class="col-sm-3 col-form-label">Heading</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="input-title"
+                               maxlength="100" placeholder="Title" required>
+                        <div class="invalid-feedback">
+                            Enter this field
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row p-3">
+                    <label for="input-content" class="col-sm-3 col-form-label">Questions body</label>
+                    <div class="col-sm-9">
+                                <textarea class="form-control" id="input-content"
+                                          placeholder="Text your question" maxlength="10000" required></textarea>
+                        <div class="invalid-feedback">
+                            Enter this field
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group row p-3">
+                    <label for="input-tags" class="col-sm-3 col-form-label">Tags</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="input-tags"
+                               placeholder="Tags of your question" required>
+                        <div class="invalid-feedback">
+                            Enter this field
+                        </div>
+                    </div>
+                </div>
+
+                <button id="create-button" class="btn btn-dark mb-2" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+
+{% endblock %}

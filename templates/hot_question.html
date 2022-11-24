@@ -1,0 +1,22 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-9 pr-5 mt-2">
+        <div class="headings">
+            <h2>HOT QUESTIONS</h2>
+            <a href="#" style="accent-color: #adb5bd">Rating issues</a>
+        </div>
+
+        {% for question in questions %}
+            {% include "inc/question_item.html" %}
+        {% endfor %}
+
+    </div>
+
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+    {% include 'inc/paginator.html' %}
+
+{% endblock %}

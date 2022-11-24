@@ -1,0 +1,93 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-5" id="login-card">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4 mt-1">Registration</h3>
+                <form action="index.html" enctype="multipart/form-data" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-email" class="input-group-text"><span><i
+                                        class="fas fa-envelope"></i></span></label>
+                            </div>
+                            <input id="user-email" class="form-control" placeholder="Email"
+                                   maxlength="50" type="email" required>
+                            <div class="invalid-feedback">
+                                Enter your Email
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-login" class="input-group-text"><span><i
+                                        class="fas fa-user"></i></span></label>
+                            </div>
+                            <input id="user-login" class="form-control" placeholder="Login"
+                                   maxlength="30" type="text" required>
+                            <div class="invalid-feedback">
+                                Enter this field
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-password" class="input-group-text"><span><i
+                                        class="fas fa-lock"></i></span></label>
+                            </div>
+                            <input id="user-password" class="form-control" placeholder="Password"
+                                   maxlength="20" type="password" required>
+                            <div class="invalid-feedback">
+                                Enter this field
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-repeat-password" class="input-group-text"><span><i
+                                        class="fas fa-lock"></i></span></label>
+                            </div>
+                            <input id="user-repeat-password" class="form-control" placeholder="Repeat your password"
+                                   maxlength="20" type="password" required>
+                            <div class="invalid-feedback">
+                                Enter this field
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <div class="input-group mb-3">
+                                <input type="file" class="form-control" id="inputGroupFile02">
+                                <label class="input-group-text" for="inputGroupFile02">Select avatar</label>
+                            </div>
+                            <div class="invalid-feedback">
+                                Select file
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-4">
+                        <button class="btn btn-primary btn-dark" type="submit">Create account</button>
+                    </div>
+                    <p class="text-center mt-4"><a href="{% url 'login' %}" class="btn btn-link">Your already have account</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4"></div>
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+
+{% endblock %}

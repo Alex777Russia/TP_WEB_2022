@@ -1,0 +1,57 @@
+{% extends "inc/base.html" %}
+{% load static %}
+{% block content %}
+
+    <div class="col-5" id="login-card">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title text-center mb-4 mt-1">Log In</h3>
+                <form action="index.html" class="needs-validation" novalidate>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-login" class="input-group-text">
+                                    <span><i class="fas fa-user"></i></span>
+                                </label>
+                            </div>
+                            <input id="user-login" class="form-control" placeholder="Email or login"
+                                   maxlength="50" type="email" required>
+                            <div class="invalid-feedback">
+                                Enter your email or login
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mt-3">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <label for="user-password" class="input-group-text">
+                                    <span><i class="fas fa-lock"></i></span>
+                                </label>
+                            </div>
+                            <input id="user-password" class="form-control" placeholder="*******"
+                                   maxlength="20" type="password" required>
+                            <div class="invalid-feedback">
+                                Enter this field
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-4">
+                        <button class="btn btn-primary btn-dark" type="submit">Login</button>
+                    </div>
+                    <!--                            <div class="form-group">-->
+                    <!--                                <button class="btn btn-primary btn-dark" type="submit">LogIn</button>-->
+                    <!--                            </div>-->
+                    <p class="text-center"><a href="#" class="btn btn-light">Forgot your password?</a></p>
+                    <p class="text-center"><a href="{% url 'signup' %}" class="btn btn-link">Create account</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-4"></div>
+    <aside id="aside-info" class="col-3">
+        {% include 'inc/right_menu.html' %}
+    </aside>
+
+{% endblock %}
