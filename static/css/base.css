@@ -1,4 +1,3 @@
-/* Sticky footer from Bootstrap documentation */
 :root {
     --footer-height: 60px;
 }
@@ -18,27 +17,32 @@ body {
     width: 100%;
     height: var(--footer-height); /* Set the fixed height of the footer here */
     line-height: var(--footer-height); /* Vertically center the text there */
-}
-
-#main_label div {
-    display: flex;
-    align-items: center;
-}
-
-#site-title {
-    margin-right: 10px;
-}
+} /* did not use */
 
 #search-box {
     max-width: 50%;
+}
+
+#main-label {
+    display: inline-block;
 }
 
 #user-dropdown {
     display: inline-block;
 }
 
-#ask-question, #user-pic, #user-menu {
-    margin-right: 16px;
+#user-pic {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+#ask-question {
+    margin-right: 30px;
+}
+
+#user-menu {
+    margin-right: 20px;
 }
 
 #aside-info {
