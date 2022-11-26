@@ -1,0 +1,12 @@
+{%  extends 'inc/base.html' %}
+{% load static %}
+{% block content %}
+<div class="row type-question">
+    <div class="col-3">Tag: <a>#{{ tag }}</a></div>
+</div>
+    {% for question in questions  %}
+         {% include 'inc/one_guestion.html' %}
+    {% endfor %}
+
+    {% include 'inc/pagination.html' %}
+{% endblock content %}
