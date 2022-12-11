@@ -43,7 +43,7 @@ class Command(BaseCommand):
     def generate_profiles(self, count):
         self.generate_users(count)
         users_ids = list(User.objects.values_list("id", flat=True))
-        profile_pics = ["avatars/profile_pic.jpeg", "avatars/sample.jpeg"]
+        profile_pics = ["static/img/profile_photo.jpg", "static/img/ilon_musk.jpg"]
 
         for i in range(count):
             Profile.objects.create(user_id=users_ids[i], user_name=fake.last_name(),
@@ -61,7 +61,7 @@ class Command(BaseCommand):
                 author_id=choice(profiles),
                 title=fake.sentence(nb_words=3),
                 content=fake.text(),
-                creation_date=fake.date_time_between(make_aware(datetime(year=2019, month=1, day=1),
+                creation_date=fake.date_time_between(make_aware(datetime(year=2022, month=9, day=17),
                                                                 timezone.get_current_timezone()),
                                                      timezone.now())
             )
@@ -87,7 +87,7 @@ class Command(BaseCommand):
                     author_id=choice(profiles),
                     related_question_id=question_id,
                     content=fake.text(),
-                    creation_date=fake.date_time_between(make_aware(datetime(year=2020, month=10, day=1),
+                    creation_date=fake.date_time_between(make_aware(datetime(year=2022, month=9, day=17),
                                                                     timezone.get_current_timezone()),
                                                          timezone.now())
                 )
