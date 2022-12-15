@@ -19,7 +19,7 @@
                 <a href="{% url 'question_page' pk=question.id %}"
                    class="link-to-answers">Ответы({{ question.num_of_answers }})</a>
                 <p class="question-tags">Теги:
-                    {% for t in question.tags %}
+                    {% for t in question.tags.all %}
                         <a href="{% url 'tag_questions' tag=t %}">{{ t }}</a>
                     {% endfor %}
             </div>
