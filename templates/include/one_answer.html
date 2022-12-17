@@ -7,13 +7,14 @@
             <div class="like-dislike">
                 <button class="upvote-btn btn btn-secondary btn-circle"><i class="fas fa-chevron-up"></i>
                 </button>
-                <i class="post-rating">0</i>
+                <i class="post-rating"> {{ answer.rating }}</i>
                 <button class="downvote-btn btn btn-secondary btn-circle"><i
                         class="fas fa-chevron-down"></i></button>
             </div>
         </div>
         <div class="col-10 right-side">
-            <p class="question-description">{{ answer.text|linebreaks }}</p>
+            <h4 class="question-title">{{ answer.author }}</h4>
+            <p class="question-description">{{ answer.content }}</p>
             <div class="form-check mark-correct">
                 <input class="form-check-input" type="checkbox" id="correct-checkbox-2">
                 <label class="form-check-label" for="correct-checkbox-2">
